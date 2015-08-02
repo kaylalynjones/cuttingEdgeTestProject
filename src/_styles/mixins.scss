@@ -1,0 +1,12 @@
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+  $remSize: $size / 10px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($font, $line) {
+  font-size: $font;
+  font-size: calculateRem($font);
+  line-height: $line;
+  line-height: calculateRem($line);
+}

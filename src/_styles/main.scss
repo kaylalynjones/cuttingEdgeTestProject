@@ -1,0 +1,162 @@
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+@import 'mixins';
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Styling on warning for users on IE7 or below
+.browsehappy {
+  text-align: center;
+  margin: 0;
+  background: #fff8e2;
+  color: #000;
+  padding: 0.5em 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  margin: calculateRem(40px);
+}
+
+h1 {
+  @include fontSize(52px, 70px);
+
+  &.vw {
+      font-size: 5vw;
+  }
+}
+
+h2 {
+  @include fontSize(40px, 55px);
+
+  &.vw {
+    font-size: 3vw;
+  }
+}
+
+h3 {
+  @include fontSize(28px, 41px);
+
+  &.vw {
+    font-size: 2vw;
+  }
+}
+
+h4 {
+  @include fontSize(24px, 36px);
+  font-weight: lighter;
+
+  &.vw {
+    font-size: 2vw;
+  }
+}
+
+h5 {
+  @include fontSize(18px, 30px);
+}
+
+h6 {
+  @include fontSize(10px, 10px);
+}
+
+p {
+  @include fontSize(14px, 27px);
+
+}
+
+
+//////
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 100%;
+  min-height: 700px;
+  background-color: #eee;
+  padding: calculateRem(40px);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.flex-a {
+  order: 1;
+  flex-direction: column;
+  display: flex;
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  margin: calculateRem(10px);
+  padding: calculateRem(20px);
+}
+.flex-b {
+  order: 2;
+  width: 250px;
+  height: 250px;
+  background-color: purple;
+  margin: calculateRem(10px);
+  align-self: flex-end;
+}
+.flex-c {
+  order: 3;
+  width: 250px;
+  height: 250px;
+  background-color: green;
+  margin: calculateRem(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-d {
+  order: 4;
+  width: 250px;
+  height: 250px;
+  background-color: blue;
+  margin: calculateRem(10px);
+}
+.flex-one {
+  order: 1;
+  height: 50px;
+  background-color: darken(#eee, 10%);
+  margin: calculateRem(10px) 0;
+}
+.flex-two {
+  order: 2;
+  height: 50px;
+  background-color: darken(#eee, 20%);
+  margin: calculateRem(10px) 0;
+}
+.flex-three {
+  order: 3;
+  height: 50px;
+  background-color: darken(#eee, 40%);
+  margin: calculateRem(10px) 0;
+}
+.flex-x {
+  order: 1;
+  height: 30px;
+  width: 50px;
+  border: 2px solid black;
+  background-color: black;
+  margin: calculateRem(10px);
+
+}
+.flex-y {
+  order: 2;
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  background-color: black;
+  margin: calculateRem(10px);
+
+}
